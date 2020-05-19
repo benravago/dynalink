@@ -23,16 +23,16 @@
  * questions.
  */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodType;
 import java.util.function.Supplier;
-import jdk.dynalink.SecureLookupSupplier;
-import jdk.dynalink.linker.ConversionComparator.Comparison;
-import jdk.dynalink.linker.GuardedInvocation;
-import jdk.dynalink.linker.LinkRequest;
-import jdk.dynalink.linker.LinkerServices;
+import dynalink.SecureLookupSupplier;
+import dynalink.linker.ConversionComparator.Comparison;
+import dynalink.linker.GuardedInvocation;
+import dynalink.linker.LinkRequest;
+import dynalink.linker.LinkerServices;
 
 final class LinkerServicesWithMissingMemberHandlerFactory implements LinkerServices {
     final LinkerServices linkerServices;

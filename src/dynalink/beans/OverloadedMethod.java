@@ -58,7 +58,7 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
@@ -68,10 +68,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import jdk.dynalink.SecureLookupSupplier;
-import jdk.dynalink.internal.InternalTypeUtilities;
-import jdk.dynalink.linker.LinkerServices;
-import jdk.dynalink.linker.support.Lookup;
+import dynalink.SecureLookupSupplier;
+import dynalink.internal.InternalTypeUtilities;
+import dynalink.linker.LinkerServices;
+import dynalink.linker.support.Lookup;
 
 /**
  * Represents a subset of overloaded methods for a certain method name on a certain class. It can be either a fixarg or

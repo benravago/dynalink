@@ -58,15 +58,15 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker.support;
+package dynalink.linker.support;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import jdk.dynalink.DynamicLinker;
-import jdk.dynalink.linker.LinkerServices;
+import dynalink.DynamicLinker;
+import dynalink.linker.LinkerServices;
 
 /**
  * Utility methods for creating typical guards for
@@ -75,7 +75,7 @@ import jdk.dynalink.linker.LinkerServices;
  */
 public final class Guards {
     private static final Logger LOG = Logger
-            .getLogger(Guards.class.getName(), "jdk.dynalink.support.messages");
+            .getLogger(Guards.class.getName(), "dynalink.support.messages");
 
     private Guards() {
     }

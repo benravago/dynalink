@@ -58,7 +58,7 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink;
+package dynalink;
 
 import java.lang.StackWalker.StackFrame;
 import java.lang.invoke.MethodHandle;
@@ -66,15 +66,15 @@ import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
 import java.lang.invoke.MutableCallSite;
 import java.util.Objects;
-import jdk.dynalink.linker.GuardedInvocation;
-import jdk.dynalink.linker.GuardedInvocationTransformer;
-import jdk.dynalink.linker.GuardingDynamicLinker;
-import jdk.dynalink.linker.LinkRequest;
-import jdk.dynalink.linker.LinkerServices;
-import jdk.dynalink.linker.support.Lookup;
-import jdk.dynalink.linker.support.SimpleLinkRequest;
-import jdk.dynalink.support.ChainedCallSite;
-import jdk.dynalink.support.SimpleRelinkableCallSite;
+import dynalink.linker.GuardedInvocation;
+import dynalink.linker.GuardedInvocationTransformer;
+import dynalink.linker.GuardingDynamicLinker;
+import dynalink.linker.LinkRequest;
+import dynalink.linker.LinkerServices;
+import dynalink.linker.support.Lookup;
+import dynalink.linker.support.SimpleLinkRequest;
+import dynalink.support.ChainedCallSite;
+import dynalink.support.SimpleRelinkableCallSite;
 
 /**
  * The linker for {@link RelinkableCallSite} objects. A dynamic linker is a main

@@ -58,11 +58,11 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodType;
-import jdk.dynalink.CallSiteDescriptor;
+import dynalink.CallSiteDescriptor;
 
 /**
  * A dynamic method bound to exactly one Java method or constructor that is not caller sensitive. Since its target is

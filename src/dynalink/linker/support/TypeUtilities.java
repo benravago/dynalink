@@ -58,15 +58,15 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker.support;
+package dynalink.linker.support;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.IdentityHashMap;
 import java.util.Map;
-import jdk.dynalink.DynamicLinkerFactory;
-import jdk.dynalink.linker.MethodTypeConversionStrategy;
+import dynalink.DynamicLinkerFactory;
+import dynalink.linker.MethodTypeConversionStrategy;
 
 /**
  * Various static utility methods for working with Java types.

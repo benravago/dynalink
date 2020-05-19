@@ -58,13 +58,13 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.reflect.Modifier;
 import java.security.AccessControlContext;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
-import jdk.dynalink.internal.AccessControlContextFactory;
+import dynalink.internal.AccessControlContextFactory;
 
 /**
  * A utility class to check whether a given class is in a package with restricted access e.g. "sun.*" etc.

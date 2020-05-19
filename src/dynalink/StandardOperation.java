@@ -58,7 +58,7 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink;
+package dynalink;
 
 /**
  * Defines the standard dynamic operations. The operations {@link #GET} and {@link #SET} must

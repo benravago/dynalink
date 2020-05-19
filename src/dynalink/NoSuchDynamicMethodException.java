@@ -58,9 +58,9 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink;
+package dynalink;
 
-import jdk.dynalink.linker.GuardingDynamicLinker;
+import dynalink.linker.GuardingDynamicLinker;
 
 /**
  * Thrown at the invocation if the call site can not be linked by any available {@link GuardingDynamicLinker}.

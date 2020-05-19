@@ -22,14 +22,14 @@
  * or visit www.oracle.com if you need additional information or have any
  * questions.
  */
-package jdk.dynalink.internal;
+package dynalink.internal;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import jdk.dynalink.linker.support.TypeUtilities;
+import dynalink.linker.support.TypeUtilities;
 
 /**
  * Various static utility methods for testing type relationships; internal to Dynalink.

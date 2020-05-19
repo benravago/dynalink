@@ -58,15 +58,15 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker.support;
+package dynalink.linker.support;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
-import jdk.dynalink.linker.GuardedInvocation;
-import jdk.dynalink.linker.GuardingDynamicLinker;
-import jdk.dynalink.linker.LinkRequest;
-import jdk.dynalink.linker.LinkerServices;
+import dynalink.linker.GuardedInvocation;
+import dynalink.linker.GuardingDynamicLinker;
+import dynalink.linker.LinkRequest;
+import dynalink.linker.LinkerServices;
 
 /**
  * A {@link GuardingDynamicLinker} that delegates sequentially to a list of

@@ -58,9 +58,9 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker;
+package dynalink.linker;
 
-import jdk.dynalink.linker.support.CompositeTypeBasedGuardingDynamicLinker;
+import dynalink.linker.support.CompositeTypeBasedGuardingDynamicLinker;
 
 /**
  * A guarding dynamic linker that can determine whether it can link the call site solely based on the type of the first

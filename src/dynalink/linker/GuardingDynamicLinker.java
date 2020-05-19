@@ -58,12 +58,12 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker;
+package dynalink.linker;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodType;
 import java.util.List;
-import jdk.dynalink.DynamicLinkerFactory;
+import dynalink.DynamicLinkerFactory;
 
 /**
  * The base interface for language-specific dynamic linkers. Such linkers

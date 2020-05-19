@@ -58,12 +58,12 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodType;
 import java.util.LinkedList;
 import java.util.List;
-import jdk.dynalink.linker.support.TypeUtilities;
+import dynalink.linker.support.TypeUtilities;
 
 /**
  * Represents overloaded methods applicable to a specific call site signature.

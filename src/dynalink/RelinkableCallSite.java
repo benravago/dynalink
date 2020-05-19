@@ -58,13 +58,13 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink;
+package dynalink;
 
 import java.lang.invoke.CallSite;
 import java.lang.invoke.MethodHandle;
-import jdk.dynalink.linker.GuardedInvocation;
-import jdk.dynalink.support.ChainedCallSite;
-import jdk.dynalink.support.SimpleRelinkableCallSite;
+import dynalink.linker.GuardedInvocation;
+import dynalink.support.ChainedCallSite;
+import dynalink.support.SimpleRelinkableCallSite;
 
 /**
  * Interface for call sites managed by a {@link DynamicLinker}. Users of

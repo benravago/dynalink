@@ -58,9 +58,9 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker;
+package dynalink.linker;
 
-import jdk.dynalink.DynamicLinkerFactory;
+import dynalink.DynamicLinkerFactory;
 
 /**
  * Interface for objects that are used to transform one guarded invocation into

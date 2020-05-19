@@ -58,11 +58,11 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker.support;
+package dynalink.linker.support;
 
 import java.util.Objects;
-import jdk.dynalink.CallSiteDescriptor;
-import jdk.dynalink.linker.LinkRequest;
+import dynalink.CallSiteDescriptor;
+import dynalink.linker.LinkRequest;
 
 /**
  * Default simple implementation of {@link LinkRequest}.

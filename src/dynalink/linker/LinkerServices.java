@@ -58,17 +58,17 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker;
+package dynalink.linker;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
 import java.util.function.Supplier;
-import jdk.dynalink.DynamicLinker;
-import jdk.dynalink.DynamicLinkerFactory;
-import jdk.dynalink.SecureLookupSupplier;
-import jdk.dynalink.linker.ConversionComparator.Comparison;
-import jdk.dynalink.linker.support.TypeUtilities;
+import dynalink.DynamicLinker;
+import dynalink.DynamicLinkerFactory;
+import dynalink.SecureLookupSupplier;
+import dynalink.linker.ConversionComparator.Comparison;
+import dynalink.linker.support.TypeUtilities;
 
 /**
  * Interface for services provided to {@link GuardingDynamicLinker} instances by

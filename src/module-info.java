@@ -79,8 +79,8 @@
  * method. A minimalist bootstrap method with Dynalink could look like this:
  * <pre>
  * import java.lang.invoke.*;
- * import jdk.dynalink.*;
- * import jdk.dynalink.support.*;
+ * import dynalink.*;
+ * import dynalink.support.*;
  *
  * class MyLanguageRuntime {
  *     private static final DynamicLinker dynamicLinker = new DynamicLinkerFactory().createLinker();
@@ -98,23 +98,23 @@
  * </pre>
  * There are several objects of significance in the above code snippet:
  * <ul>
- * <li>{@link jdk.dynalink.DynamicLinker} is the main object in Dynalink, it
+ * <li>{@link dynalink.DynamicLinker} is the main object in Dynalink, it
  * coordinates the linking of call sites to method handles that implement the
  * operations named in them. It is configured and created using a
- * {@link jdk.dynalink.DynamicLinkerFactory}.</li>
+ * {@link dynalink.DynamicLinkerFactory}.</li>
  * <li>When the bootstrap method is invoked, it needs to create a
  * {@link java.lang.invoke.CallSite} object. In Dynalink, these call sites need
- * to additionally implement the {@link jdk.dynalink.RelinkableCallSite}
+ * to additionally implement the {@link dynalink.RelinkableCallSite}
  * interface. "Relinkable" here alludes to the fact that if the call site
  * encounters objects of different types at run time, its target will be changed
  * to a method handle that can perform the operation on the newly encountered
- * type. {@link jdk.dynalink.support.SimpleRelinkableCallSite} and
- * {@link jdk.dynalink.support.ChainedCallSite} (not used in the above example)
+ * type. {@link dynalink.support.SimpleRelinkableCallSite} and
+ * {@link dynalink.support.ChainedCallSite} (not used in the above example)
  * are two implementations already provided by the library.</li>
- * <li>Dynalink uses {@link jdk.dynalink.CallSiteDescriptor} objects to
+ * <li>Dynalink uses {@link dynalink.CallSiteDescriptor} objects to
  * preserve the parameters to the bootstrap method: the lookup and the method type,
  * as it will need them whenever it needs to relink a call site.</li>
- * <li>Dynalink uses {@link jdk.dynalink.Operation} objects to express
+ * <li>Dynalink uses {@link dynalink.Operation} objects to express
  * dynamic operations. It does not prescribe how would you encode the operations
  * in your call site, though. That is why in the above example the
  * {@code parseOperation} function is left empty, and you would be expected to
@@ -157,7 +157,7 @@
  * The {@code SimpleRelinkableCallSite} we used above only remembers the linkage
  * for the last encountered type (it implements what is known as a <i>monomorphic
  * inline cache</i>). Another already provided implementation,
- * {@link jdk.dynalink.support.ChainedCallSite} will remember linkages for
+ * {@link dynalink.support.ChainedCallSite} will remember linkages for
  * several different types (it is a <i>polymorphic inline cache</i>) and is
  * probably a better choice in serious applications.
  * <h2>Dynalink and bytecode creation</h2>
@@ -172,27 +172,27 @@
  * (e.g. a typical representation would be some node objects in a syntax tree).
  * <h2>Available operations</h2>
  * Dynalink defines several standard operations in its
- * {@link jdk.dynalink.StandardOperation} class. The linker for Java
+ * {@link dynalink.StandardOperation} class. The linker for Java
  * objects can link all of these operations, and you are encouraged to at
  * minimum support and use these operations in your language too. The
  * standard operations {@code GET} and {@code SET} need to be combined with
- * at least one {@link jdk.dynalink.Namespace} to be useful, e.g. to express a
+ * at least one {@link dynalink.Namespace} to be useful, e.g. to express a
  * property getter, you'd use {@code StandardOperation.GET.withNamespace(StandardNamespace.PROPERTY)}.
- * Dynalink defines three standard namespaces in the {@link jdk.dynalink.StandardNamespace} class.
+ * Dynalink defines three standard namespaces in the {@link dynalink.StandardNamespace} class.
  * To associate a fixed name with an operation, you can use
- * {@link jdk.dynalink.NamedOperation} as in the previous example:
+ * {@link dynalink.NamedOperation} as in the previous example:
  * {@code StandardOperation.GET.withNamespace(StandardNamespace.PROPERTY).named("color")}
  * expresses a getter for the property named "color".
  * <h2>Operations on multiple namespaces</h2>
  * Some languages might not have separate namespaces on objects for
  * properties, elements, and methods, and a source language construct might
  * address several of them at once. Dynalink supports specifying multiple
- * {@link jdk.dynalink.Namespace} objects with {@link jdk.dynalink.NamespaceOperation}.
+ * {@link dynalink.Namespace} objects with {@link dynalink.NamespaceOperation}.
  * <h2>Language-specific linkers</h2>
  * Languages that define their own object model different than the JVM
  * class-based model and/or use their own type conversions will need to create
- * their own language-specific linkers. See the {@link jdk.dynalink.linker}
- * package and specifically the {@link jdk.dynalink.linker.GuardingDynamicLinker}
+ * their own language-specific linkers. See the {@link dynalink.linker}
+ * package and specifically the {@link dynalink.linker.GuardingDynamicLinker}
  * interface to get started.
  * <h2>Dynalink and Java objects</h2>
  * The {@code DynamicLinker} objects created by {@code DynamicLinkerFactory} by
@@ -201,13 +201,13 @@
  * that implements the usual Java semantics for all of the above operations and
  * can link any Java object that no other language-specific linker has managed
  * to link. This way, all language runtimes have built-in interoperability with
- * ordinary Java objects. See {@link jdk.dynalink.beans.BeansLinker} for details
+ * ordinary Java objects. See {@link dynalink.beans.BeansLinker} for details
  * on how it links the various operations.
  * <h2>Cross-language interoperability</h2>
  * A {@code DynamicLinkerFactory} can be configured with a
- * {@linkplain jdk.dynalink.DynamicLinkerFactory#setClassLoader(ClassLoader) class
+ * {@linkplain dynalink.DynamicLinkerFactory#setClassLoader(ClassLoader) class
  * loader}. It will try to instantiate all
- * {@link jdk.dynalink.linker.GuardingDynamicLinkerExporter} classes visible to
+ * {@link dynalink.linker.GuardingDynamicLinkerExporter} classes visible to
  * that class loader and compose the linkers they provide into the
  * {@code DynamicLinker} it creates. This allows for interoperability between
  * languages: if you have two language runtimes A and B deployed in your JVM and
@@ -218,20 +218,20 @@
  * from B will get a chance to link the call site in A when it encounters the
  * object from B.
  *
- * @uses jdk.dynalink.linker.GuardingDynamicLinkerExporter
+ * @uses dynalink.linker.GuardingDynamicLinkerExporter
  *
  * @moduleGraph
  * @since 9
  */
-module jdk.dynalink {
+module dynalink {
     requires java.logging;
 
-    exports jdk.dynalink;
-    exports jdk.dynalink.beans;
-    exports jdk.dynalink.linker;
-    exports jdk.dynalink.linker.support;
-    exports jdk.dynalink.support;
+    exports dynalink;
+    exports dynalink.beans;
+    exports dynalink.linker;
+    exports dynalink.linker.support;
+    exports dynalink.support;
 
-    uses jdk.dynalink.linker.GuardingDynamicLinkerExporter;
+    uses dynalink.linker.GuardingDynamicLinkerExporter;
 }
 

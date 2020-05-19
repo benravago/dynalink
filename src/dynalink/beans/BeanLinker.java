@@ -58,7 +58,7 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
@@ -69,18 +69,18 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
-import jdk.dynalink.CallSiteDescriptor;
-import jdk.dynalink.Namespace;
-import jdk.dynalink.Operation;
-import jdk.dynalink.StandardNamespace;
-import jdk.dynalink.StandardOperation;
-import jdk.dynalink.beans.GuardedInvocationComponent.ValidationType;
-import jdk.dynalink.linker.GuardedInvocation;
-import jdk.dynalink.linker.LinkerServices;
-import jdk.dynalink.linker.TypeBasedGuardingDynamicLinker;
-import jdk.dynalink.linker.support.Guards;
-import jdk.dynalink.linker.support.Lookup;
-import jdk.dynalink.linker.support.TypeUtilities;
+import dynalink.CallSiteDescriptor;
+import dynalink.Namespace;
+import dynalink.Operation;
+import dynalink.StandardNamespace;
+import dynalink.StandardOperation;
+import dynalink.beans.GuardedInvocationComponent.ValidationType;
+import dynalink.linker.GuardedInvocation;
+import dynalink.linker.LinkerServices;
+import dynalink.linker.TypeBasedGuardingDynamicLinker;
+import dynalink.linker.support.Guards;
+import dynalink.linker.support.Lookup;
+import dynalink.linker.support.TypeUtilities;
 
 /**
  * A class that provides linking capabilities for a single POJO class. Normally not used directly, but managed by

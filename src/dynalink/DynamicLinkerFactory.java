@@ -58,7 +58,7 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink;
+package dynalink;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodType;
@@ -78,21 +78,21 @@ import java.util.ServiceConfigurationError;
 import java.util.ServiceLoader;
 import java.util.Set;
 import java.util.function.Supplier;
-import jdk.dynalink.beans.BeansLinker;
-import jdk.dynalink.internal.AccessControlContextFactory;
-import jdk.dynalink.linker.GuardedInvocation;
-import jdk.dynalink.linker.GuardedInvocationTransformer;
-import jdk.dynalink.linker.GuardingDynamicLinker;
-import jdk.dynalink.linker.GuardingDynamicLinkerExporter;
-import jdk.dynalink.linker.GuardingTypeConverterFactory;
-import jdk.dynalink.linker.LinkRequest;
-import jdk.dynalink.linker.LinkerServices;
-import jdk.dynalink.linker.MethodHandleTransformer;
-import jdk.dynalink.linker.MethodTypeConversionStrategy;
-import jdk.dynalink.linker.support.CompositeGuardingDynamicLinker;
-import jdk.dynalink.linker.support.CompositeTypeBasedGuardingDynamicLinker;
-import jdk.dynalink.linker.support.DefaultInternalObjectFilter;
-import jdk.dynalink.linker.support.TypeUtilities;
+import dynalink.beans.BeansLinker;
+import dynalink.internal.AccessControlContextFactory;
+import dynalink.linker.GuardedInvocation;
+import dynalink.linker.GuardedInvocationTransformer;
+import dynalink.linker.GuardingDynamicLinker;
+import dynalink.linker.GuardingDynamicLinkerExporter;
+import dynalink.linker.GuardingTypeConverterFactory;
+import dynalink.linker.LinkRequest;
+import dynalink.linker.LinkerServices;
+import dynalink.linker.MethodHandleTransformer;
+import dynalink.linker.MethodTypeConversionStrategy;
+import dynalink.linker.support.CompositeGuardingDynamicLinker;
+import dynalink.linker.support.CompositeTypeBasedGuardingDynamicLinker;
+import dynalink.linker.support.DefaultInternalObjectFilter;
+import dynalink.linker.support.TypeUtilities;
 
 /**
  * A factory class for creating {@link DynamicLinker} objects. Dynamic linkers

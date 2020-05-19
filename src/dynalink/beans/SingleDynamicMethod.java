@@ -58,17 +58,17 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
 import java.lang.reflect.Array;
 import java.util.StringTokenizer;
-import jdk.dynalink.CallSiteDescriptor;
-import jdk.dynalink.linker.LinkerServices;
-import jdk.dynalink.linker.support.Guards;
-import jdk.dynalink.linker.support.Lookup;
+import dynalink.CallSiteDescriptor;
+import dynalink.linker.LinkerServices;
+import dynalink.linker.support.Guards;
+import dynalink.linker.support.Lookup;
 
 /**
  * Base class for dynamic methods that dispatch to a single target Java method or constructor. Handles adaptation of the

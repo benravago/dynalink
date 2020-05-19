@@ -23,7 +23,7 @@
  * questions.
  */
 
-package jdk.dynalink.internal;
+package dynalink.internal;
 
 import java.security.AccessControlContext;
 import java.security.Permission;

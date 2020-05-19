@@ -58,13 +58,13 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker.support;
+package dynalink.linker.support;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
-import jdk.dynalink.DynamicLinkerFactory;
-import jdk.dynalink.linker.MethodHandleTransformer;
+import dynalink.DynamicLinkerFactory;
+import dynalink.linker.MethodHandleTransformer;
 
 /**
  * Default implementation for a

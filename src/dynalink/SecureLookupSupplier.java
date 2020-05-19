@@ -23,7 +23,7 @@
  * questions.
  */
 
-package jdk.dynalink;
+package dynalink;
 
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodHandles.Lookup;

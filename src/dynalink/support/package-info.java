@@ -64,4 +64,4 @@
  * </p>
  * @since 9
  */
-package jdk.dynalink.support;
+package dynalink.support;

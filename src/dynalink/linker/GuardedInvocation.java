@@ -58,7 +58,7 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker;
+package dynalink.linker;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
@@ -67,8 +67,8 @@ import java.lang.invoke.SwitchPoint;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Supplier;
-import jdk.dynalink.CallSiteDescriptor;
-import jdk.dynalink.linker.support.Guards;
+import dynalink.CallSiteDescriptor;
+import dynalink.linker.support.Guards;
 
 /**
  * Represents a conditionally valid method handle. Usually produced as a return

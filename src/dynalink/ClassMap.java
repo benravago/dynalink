@@ -58,7 +58,7 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink;
+package dynalink;
 
 import java.lang.ref.Reference;
 import java.lang.ref.SoftReference;
@@ -69,8 +69,8 @@ import java.util.Map;
 import java.util.WeakHashMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
-import jdk.dynalink.internal.AccessControlContextFactory;
-import jdk.dynalink.internal.InternalTypeUtilities;
+import dynalink.internal.AccessControlContextFactory;
+import dynalink.internal.InternalTypeUtilities;
 
 /**
  * A dual map that can either strongly or weakly reference a given class depending on whether the class is visible from

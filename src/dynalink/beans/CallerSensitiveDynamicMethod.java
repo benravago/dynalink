@@ -58,7 +58,7 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
@@ -72,12 +72,10 @@ import java.lang.reflect.Modifier;
 import java.security.AccessControlContext;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
-import jdk.dynalink.CallSiteDescriptor;
-import jdk.dynalink.SecureLookupSupplier;
-import jdk.dynalink.internal.AccessControlContextFactory;
-import jdk.dynalink.linker.support.Lookup;
-import jdk.internal.reflect.CallerSensitive;
-
+import dynalink.CallSiteDescriptor;
+import dynalink.SecureLookupSupplier;
+import dynalink.internal.AccessControlContextFactory;
+import dynalink.linker.support.Lookup;
 
 /**
  * A dynamic method bound to exactly one Java method or constructor that is caller sensitive. Since the target method is

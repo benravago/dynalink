@@ -58,10 +58,10 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
-import jdk.dynalink.linker.GuardedInvocation;
+import dynalink.linker.GuardedInvocation;
 
 /**
  * Represents one component for a GuardedInvocation of a potentially multi-namespace operation of an

@@ -58,11 +58,11 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
-import jdk.dynalink.CallSiteDescriptor;
-import jdk.dynalink.linker.LinkerServices;
+import dynalink.CallSiteDescriptor;
+import dynalink.linker.LinkerServices;
 
 /**
  * Represents a single dynamic method. A "dynamic" method can be bound to a single Java method, or can be bound to all

@@ -58,7 +58,7 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink;
+package dynalink;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
@@ -71,14 +71,14 @@ import java.security.PrivilegedAction;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Supplier;
-import jdk.dynalink.internal.AccessControlContextFactory;
-import jdk.dynalink.linker.ConversionComparator;
-import jdk.dynalink.linker.ConversionComparator.Comparison;
-import jdk.dynalink.linker.GuardedInvocation;
-import jdk.dynalink.linker.GuardingTypeConverterFactory;
-import jdk.dynalink.linker.LinkerServices;
-import jdk.dynalink.linker.MethodTypeConversionStrategy;
-import jdk.dynalink.linker.support.TypeUtilities;
+import dynalink.internal.AccessControlContextFactory;
+import dynalink.linker.ConversionComparator;
+import dynalink.linker.ConversionComparator.Comparison;
+import dynalink.linker.GuardedInvocation;
+import dynalink.linker.GuardingTypeConverterFactory;
+import dynalink.linker.LinkerServices;
+import dynalink.linker.MethodTypeConversionStrategy;
+import dynalink.linker.support.TypeUtilities;
 
 /**
  * A factory for type converters. This class is the main implementation behind the

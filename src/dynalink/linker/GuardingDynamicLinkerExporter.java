@@ -23,13 +23,13 @@
  * questions.
  */
 
-package jdk.dynalink.linker;
+package dynalink.linker;
 
 import java.security.Permission;
 import java.util.List;
 import java.util.ServiceLoader;
 import java.util.function.Supplier;
-import jdk.dynalink.DynamicLinkerFactory;
+import dynalink.DynamicLinkerFactory;
 
 /**
  * A class acting as a supplier of guarding dynamic linkers that can be
@@ -37,7 +37,7 @@ import jdk.dynalink.DynamicLinkerFactory;
  * to export their own linkers should subclass this class and implement the
  * {@link #get()} method to return a list of exported linkers and declare the
  * subclass in
- * {@code /META-INF/services/jdk.dynalink.linker.GuardingDynamicLinkerExporter}
+ * {@code /META-INF/services/dynalink.linker.GuardingDynamicLinkerExporter}
  * resource of their distribution (typically, JAR file) so that dynamic linker
  * factories can discover them using the {@link ServiceLoader} mechanism. Note
  * that instantiating this class is tied to a security check for the

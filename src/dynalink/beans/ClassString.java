@@ -58,7 +58,7 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodType;
@@ -68,10 +68,10 @@ import java.security.PrivilegedAction;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import jdk.dynalink.internal.AccessControlContextFactory;
-import jdk.dynalink.internal.InternalTypeUtilities;
-import jdk.dynalink.linker.LinkerServices;
-import jdk.dynalink.linker.support.TypeUtilities;
+import dynalink.internal.AccessControlContextFactory;
+import dynalink.internal.InternalTypeUtilities;
+import dynalink.linker.LinkerServices;
+import dynalink.linker.support.TypeUtilities;
 
 /**
  * Represents a sequence of {@link Class} objects, useful for representing method signatures. Provides value

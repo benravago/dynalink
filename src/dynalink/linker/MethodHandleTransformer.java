@@ -58,10 +58,10 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker;
+package dynalink.linker;
 
 import java.lang.invoke.MethodHandle;
-import jdk.dynalink.DynamicLinkerFactory;
+import dynalink.DynamicLinkerFactory;
 
 /**
  * A generic interface describing operations that transform method handles.

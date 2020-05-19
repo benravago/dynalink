@@ -58,11 +58,11 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.io.Serializable;
 import java.util.Objects;
-import jdk.dynalink.StandardOperation;
+import dynalink.StandardOperation;
 
 /**
  * Object that allows access to the static members of a class (its static

@@ -66,4 +66,4 @@
  * </p>
  * @since 9
  */
-package jdk.dynalink.linker.support;
+package dynalink.linker.support;

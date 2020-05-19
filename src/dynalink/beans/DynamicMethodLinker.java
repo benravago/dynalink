@@ -58,20 +58,20 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
-import jdk.dynalink.CallSiteDescriptor;
-import jdk.dynalink.NamedOperation;
-import jdk.dynalink.Operation;
-import jdk.dynalink.StandardNamespace;
-import jdk.dynalink.StandardOperation;
-import jdk.dynalink.linker.GuardedInvocation;
-import jdk.dynalink.linker.LinkRequest;
-import jdk.dynalink.linker.LinkerServices;
-import jdk.dynalink.linker.TypeBasedGuardingDynamicLinker;
-import jdk.dynalink.linker.support.Guards;
+import dynalink.CallSiteDescriptor;
+import dynalink.NamedOperation;
+import dynalink.Operation;
+import dynalink.StandardNamespace;
+import dynalink.StandardOperation;
+import dynalink.linker.GuardedInvocation;
+import dynalink.linker.LinkRequest;
+import dynalink.linker.LinkerServices;
+import dynalink.linker.TypeBasedGuardingDynamicLinker;
+import dynalink.linker.support.Guards;
 
 /**
  * Simple linker that implements the {@link StandardOperation#CALL} operation

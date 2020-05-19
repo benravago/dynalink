@@ -58,13 +58,13 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker;
+package dynalink.linker;
 
 import java.lang.invoke.MethodHandles;
 import java.util.function.Supplier;
-import jdk.dynalink.SecureLookupSupplier;
-import jdk.dynalink.beans.BeansLinker;
-import jdk.dynalink.linker.support.TypeUtilities;
+import dynalink.SecureLookupSupplier;
+import dynalink.beans.BeansLinker;
+import dynalink.linker.support.TypeUtilities;
 
 /**
  * Optional interface that can be implemented by {@link GuardingDynamicLinker}
@@ -96,7 +96,7 @@ public interface GuardingTypeConverterFactory {
      * An implementation can assume it is never requested to produce a
      * converter for those conversions. If a language runtime needs to customize
      * method invocation conversions, it should
-     * {@link jdk.dynalink.DynamicLinkerFactory#setAutoConversionStrategy(MethodTypeConversionStrategy)
+     * {@link dynalink.DynamicLinkerFactory#setAutoConversionStrategy(MethodTypeConversionStrategy)
      * set an autoconversion strategy in the dynamic linker factory} instead.
      * <p>Dynalink is at liberty to either cache some of the returned converters
      * or to repeatedly request the converter factory to create the same
@@ -109,7 +109,7 @@ public interface GuardingTypeConverterFactory {
      * requested as part of linking an {@code invokedynamic} instruction the
      * supplier will return the lookup passed to the bootstrap method, otherwise
      * if the method is invoked from within a
-     * {@link LinkerServices#getWithLookup(Supplier, jdk.dynalink.SecureLookupSupplier)}
+     * {@link LinkerServices#getWithLookup(Supplier, dynalink.SecureLookupSupplier)}
      * it will delegate to the secure lookup supplier. In any other case,
      * it will return the public lookup. A typical case where the lookup might
      * be needed is when the converter creates a Java adapter class on the fly

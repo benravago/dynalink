@@ -58,19 +58,19 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandles.Lookup;
 import java.util.Collections;
 import java.util.Set;
-import jdk.dynalink.DynamicLinkerFactory;
-import jdk.dynalink.StandardNamespace;
-import jdk.dynalink.StandardOperation;
-import jdk.dynalink.linker.GuardedInvocation;
-import jdk.dynalink.linker.GuardingDynamicLinker;
-import jdk.dynalink.linker.LinkRequest;
-import jdk.dynalink.linker.LinkerServices;
-import jdk.dynalink.linker.TypeBasedGuardingDynamicLinker;
+import dynalink.DynamicLinkerFactory;
+import dynalink.StandardNamespace;
+import dynalink.StandardOperation;
+import dynalink.linker.GuardedInvocation;
+import dynalink.linker.GuardingDynamicLinker;
+import dynalink.linker.LinkRequest;
+import dynalink.linker.LinkerServices;
+import dynalink.linker.TypeBasedGuardingDynamicLinker;
 
 /**
  * A linker for ordinary Java objects. Normally used as the ultimate fallback

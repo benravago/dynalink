@@ -58,11 +58,11 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.linker;
+package dynalink.linker;
 
-import jdk.dynalink.CallSiteDescriptor;
-import jdk.dynalink.DynamicLinker;
-import jdk.dynalink.DynamicLinkerFactory;
+import dynalink.CallSiteDescriptor;
+import dynalink.DynamicLinker;
+import dynalink.DynamicLinkerFactory;
 
 /**
  * Represents a request to link a particular invocation at a particular call

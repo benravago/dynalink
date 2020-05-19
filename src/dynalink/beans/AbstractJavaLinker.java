@@ -58,7 +58,7 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
@@ -75,22 +75,21 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import jdk.dynalink.CallSiteDescriptor;
-import jdk.dynalink.NamedOperation;
-import jdk.dynalink.Namespace;
-import jdk.dynalink.NamespaceOperation;
-import jdk.dynalink.Operation;
-import jdk.dynalink.StandardNamespace;
-import jdk.dynalink.StandardOperation;
-import jdk.dynalink.beans.GuardedInvocationComponent.ValidationType;
-import jdk.dynalink.internal.InternalTypeUtilities;
-import jdk.dynalink.linker.GuardedInvocation;
-import jdk.dynalink.linker.GuardingDynamicLinker;
-import jdk.dynalink.linker.LinkRequest;
-import jdk.dynalink.linker.LinkerServices;
-import jdk.dynalink.linker.support.Guards;
-import jdk.dynalink.linker.support.Lookup;
-import jdk.internal.reflect.CallerSensitive;
+import dynalink.CallSiteDescriptor;
+import dynalink.NamedOperation;
+import dynalink.Namespace;
+import dynalink.NamespaceOperation;
+import dynalink.Operation;
+import dynalink.StandardNamespace;
+import dynalink.StandardOperation;
+import dynalink.beans.GuardedInvocationComponent.ValidationType;
+import dynalink.internal.InternalTypeUtilities;
+import dynalink.linker.GuardedInvocation;
+import dynalink.linker.GuardingDynamicLinker;
+import dynalink.linker.LinkRequest;
+import dynalink.linker.LinkerServices;
+import dynalink.linker.support.Guards;
+import dynalink.linker.support.Lookup;
 
 /**
  * A base class for both {@link StaticClassLinker} and {@link BeanLinker}. Deals with common aspects of property
@@ -268,10 +267,6 @@ abstract class AbstractJavaLinker implements GuardingDynamicLinker {
      * @return the single dynamic method representing the reflective member
      */
     private static SingleDynamicMethod createDynamicMethod(final AccessibleObject m) {
-        if (m.isAnnotationPresent(CallerSensitive.class)) {
-            // Method has @CallerSensitive annotation
-            return new CallerSensitiveDynamicMethod(m);
-        }
         // Method has no @CallerSensitive annotation
         final MethodHandle mh;
         try {

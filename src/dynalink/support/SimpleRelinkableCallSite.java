@@ -58,12 +58,12 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.support;
+package dynalink.support;
 
 import java.lang.invoke.MethodHandle;
-import jdk.dynalink.CallSiteDescriptor;
-import jdk.dynalink.DynamicLinker;
-import jdk.dynalink.linker.GuardedInvocation;
+import dynalink.CallSiteDescriptor;
+import dynalink.DynamicLinker;
+import dynalink.linker.GuardedInvocation;
 
 /**
  * A relinkable call site that implements monomorphic inline caching strategy,

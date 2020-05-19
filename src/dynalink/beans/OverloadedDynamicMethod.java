@@ -58,7 +58,7 @@
    ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodType;
@@ -74,12 +74,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import jdk.dynalink.CallSiteDescriptor;
-import jdk.dynalink.SecureLookupSupplier;
-import jdk.dynalink.beans.ApplicableOverloadedMethods.ApplicabilityTest;
-import jdk.dynalink.internal.AccessControlContextFactory;
-import jdk.dynalink.internal.InternalTypeUtilities;
-import jdk.dynalink.linker.LinkerServices;
+import dynalink.CallSiteDescriptor;
+import dynalink.SecureLookupSupplier;
+import dynalink.beans.ApplicableOverloadedMethods.ApplicabilityTest;
+import dynalink.internal.AccessControlContextFactory;
+import dynalink.internal.InternalTypeUtilities;
+import dynalink.linker.LinkerServices;
 
 /**
  * Represents a group of {@link SingleDynamicMethod} objects that represents all overloads of a particular name (or all

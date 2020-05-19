@@ -23,15 +23,15 @@
  * questions.
  */
 
-package jdk.dynalink.beans;
+package dynalink.beans;
 
 import java.lang.invoke.MethodHandle;
-import jdk.dynalink.DynamicLinkerFactory;
-import jdk.dynalink.NamedOperation;
-import jdk.dynalink.NoSuchDynamicMethodException;
-import jdk.dynalink.StandardOperation;
-import jdk.dynalink.linker.LinkRequest;
-import jdk.dynalink.linker.LinkerServices;
+import dynalink.DynamicLinkerFactory;
+import dynalink.NamedOperation;
+import dynalink.NoSuchDynamicMethodException;
+import dynalink.StandardOperation;
+import dynalink.linker.LinkRequest;
+import dynalink.linker.LinkerServices;
 
 /**
  * A factory for creating method handles for linking missing member behavior
@@ -43,7 +43,7 @@ import jdk.dynalink.linker.LinkerServices;
  * implementer must ensure that the parameter types of the returned method
  * handle match the parameter types of the call site described in the link
  * request. The return types can differ, though, to allow
- * {@link DynamicLinkerFactory#setPrelinkTransformer(jdk.dynalink.linker.GuardedInvocationTransformer)}
+ * {@link DynamicLinkerFactory#setPrelinkTransformer(dynalink.linker.GuardedInvocationTransformer)}
  * late return type transformations}. It is allowed to return {@code null} for a
  * method handle if the default behavior is sufficient.
  * <h2>Default missing member behavior</h2>
